@@ -3,7 +3,7 @@ import Price from "./Price.component";
 import Salary from "./Salary.component";
 import Size from "./Size.component";
 
-const OptionsShow = {
+export const OptionsShow = {
   price: Price,
   salary: Salary,
   size: Size
