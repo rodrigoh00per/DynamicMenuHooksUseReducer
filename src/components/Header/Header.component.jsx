@@ -38,7 +38,13 @@ const reducer = (state, action) => {
         }
       };
     case HEADER_TYPES.HIDE_MENUS:
-      return INITIAL_STATE;
+      return {
+        ...state,
+        menusToShow: Object.keys(state.menusToShow).reduce(
+          (obj, filter) => ({ ...obj, [filter]: false }),
+          {}
+        )
+      };
     default:
       return state;
   }
